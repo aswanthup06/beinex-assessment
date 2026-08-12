@@ -17,6 +17,7 @@
   --color-accent-indigo-600: #4F46E5;
   --color-accent-indigo-500: #6366F1;
   --color-accent-indigo-400: #818CF8;
+  --color-accent-indigo-100: #E0E7FF;
   --color-accent-purple-600: #9333EA;
   --color-accent-purple-500: #A855F7;
   --color-accent-purple-400: #C084FC;
@@ -33,6 +34,30 @@
   --color-ink-50: #F8FAFC;
 }
 
-body {
 
+/* ========================================
+   Modern Scrollbar
+   ======================================== */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3B82F6 transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82F6;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
 }

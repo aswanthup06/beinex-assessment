@@ -10,10 +10,12 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur border border-white px-4 py-1.5 text-xs font-medium text-brand-blue-600 shadow-sm mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            Enterprise AI, Governed by Design
-          </span>
+          <div className="flex items-center  gap-2 mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#14B8A6]" />
+            <span className="ff-mono text-[11px] tracking-[0.2em] text-[#4B5563] uppercase">
+              Enterprise AI, Governed by Design
+            </span>
+          </div>
 
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-ink-900">
             Step Into the Future with{" "}
@@ -23,8 +25,8 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 text-ink-600 text-base md:text-lg max-w-md">
-            Dive into the AI-driven revolution. Innovate, govern and scale
-            with intelligent solutions tailored to your enterprise.
+            Dive into the AI-driven revolution. Innovate, govern and scale with
+            intelligent solutions tailored to your enterprise.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -52,31 +52,31 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-r from-white via-blue-50 to-brand-blue-100 text-ink-600 px-6 md:px-10 pt-14 pb-8">
-      {/* texture: faint dot grid */}
-      <svg
-        className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.05]"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="footerDots"
-            width="22"
-            height="22"
-            patternUnits="userSpaceOnUse"
-          >
-            <circle cx="1.5" cy="1.5" r="1.5" fill="#2563EB" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#footerDots)" />
+    <footer className="relative overflow-hidden bg-gradient-to-br from-ink-900 via-[#0B1330] to-black text-ink-400 px-6 md:px-10 pt-14 pb-8">
+      {/* grain texture */}
+      <svg className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.4] mix-blend-overlay" aria-hidden="true">
+        <filter id="footerGrain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#footerGrain)" />
       </svg>
+
+    
+
+      {/* ambient gradient glows */}
+      <div className="pointer-events-none absolute -top-40 -left-20 w-[28rem] h-[28rem] rounded-full bg-brand-blue-600/25 blur-[100px]" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 w-[24rem] h-[24rem] rounded-full bg-accent-purple-600/20 blur-[100px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-accent-indigo-500/10 blur-[100px]" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Top: brand + newsletter */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-ink-900/10">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-white/10">
           <div className="max-w-sm">
-            <img className="h-8 mb-3" src="./beinex-logo.svg" alt="Beinex" />
-            <p className="text-sm text-ink-600 leading-relaxed">
+            <div className="inline-flex items-center bg-white/95 rounded-sm px-3 py-2 shadow-lg mb-3">
+              <img className="h-6" src="./beinex-logo.svg" alt="Beinex" />
+            </div>
+            <p className="text-sm text-ink-400 leading-relaxed">
               Enterprise AI, governed and scaled with intelligent solutions
               built for trust.
             </p>
@@ -89,7 +89,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Stay in the loop"
-              className="flex-1 lg:w-64 rounded-full px-4 py-2.5 text-sm bg-white border border-ink-900/10 text-ink-900 placeholder:text-ink-400 outline-none focus:border-brand-blue-500 transition-colors"
+              className="flex-1 lg:w-64 rounded-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 text-white placeholder:text-ink-500 outline-none focus:border-brand-blue-500 transition-colors"
             />
             <button className="inline-flex items-center gap-1.5 rounded-full bg-brand-blue-600 hover:bg-brand-blue-700 transition-colors text-white text-sm font-medium px-5 py-2.5 whitespace-nowrap cursor-pointer">
               Subscribe
@@ -105,7 +105,7 @@ export default function Footer() {
               <a
                 key={link}
                 href="#"
-                className="text-ink-600 hover:text-brand-blue-600 transition-colors"
+                className="hover:text-white transition-colors"
               >
                 {link}
               </a>
@@ -118,7 +118,7 @@ export default function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="w-9 h-9 rounded-full bg-white border border-ink-900/10 hover:bg-brand-blue-600 hover:border-brand-blue-600 flex items-center justify-center text-ink-500 hover:text-white transition-colors"
+                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:bg-brand-blue-600 hover:border-brand-blue-600 flex items-center justify-center text-ink-300 hover:text-white transition-colors"
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -126,13 +126,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-ink-900/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ink-500">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ink-500">
           <span>© {new Date().getFullYear()} Beinex. All rights reserved.</span>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-brand-blue-600 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-brand-blue-600 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Terms of Service
             </a>
           </div>

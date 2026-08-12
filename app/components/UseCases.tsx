@@ -26,9 +26,12 @@ export default function UseCases() {
   return (
     <section className="bg-ink-50 px-6 md:px-10 py-16">
       <div className="max-w-2xl mx-auto text-center mb-10">
-        <span className="inline-block rounded-full bg-white border border-ink-100 px-4 py-1.5 text-xs font-medium text-brand-blue-600 shadow-sm mb-4">
-          Use Cases
-        </span>
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <span className="ff-dot w-1.5 h-1.5 rounded-full bg-[#14B8A6]" />
+          <span className="ff-mono text-[11px] tracking-[0.2em] text-[#4B5563] uppercase">
+            Use Cases
+          </span>
+        </div>
         <h2 className="text-2xl md:text-3xl font-bold text-ink-900">
           Built for how enterprises actually work
         </h2>
@@ -55,9 +58,7 @@ export default function UseCases() {
               <h3 className="text-ink-900 font-semibold text-lg mb-2 pr-6">
                 {uc.title}
               </h3>
-              <p className="text-ink-600 text-sm leading-relaxed">
-                {uc.desc}
-              </p>
+              <p className="text-ink-600 text-sm leading-relaxed">{uc.desc}</p>
 
               <ArrowUpRight className="absolute top-6 right-6 w-4 h-4 text-ink-400 opacity-0 group-hover:opacity-100 group-hover:text-brand-blue-600 transition-all" />
             </div>

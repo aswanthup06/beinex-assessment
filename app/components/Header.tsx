@@ -21,7 +21,7 @@ export default function Header() {
         ))}
       </nav>
 
-      <button className="rounded-sm bg-brand-blue-600 hover:bg-brand-blue-700 transition-colors text-white text-xs font-medium px-6 py-2.5 cursor-pointer">
+      <button className="rounded-full bg-brand-blue-600 hover:bg-brand-blue-700 transition-colors text-white text-xs font-medium px-6 py-2.5 cursor-pointer">
         Contact Us
       </button>
     </header>
